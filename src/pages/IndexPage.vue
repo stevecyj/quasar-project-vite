@@ -7,6 +7,7 @@
   >
     {{ item }}
   </div>
+  <div v-if="color">{{ color }}</div>
   <button @click="add">add</button>
 </template>
 
