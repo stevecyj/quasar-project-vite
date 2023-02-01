@@ -4,7 +4,9 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   data() {
     return {
       count: 0,
@@ -16,7 +18,7 @@ export default {
       this.count++;
     },
   },
-};
+});
 </script>
 
 <style>
