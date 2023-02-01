@@ -1,6 +1,12 @@
 <template>
   <h1>{{ count }}</h1>
   <h2 :class="[color ? 'red' : 'green']">{{ doubleCount }}</h2>
+  <div
+    v-for="(item, index) in list"
+    :key="index"
+  >
+    {{ item }}
+  </div>
   <button @click="add">add</button>
 </template>
 
@@ -12,6 +18,7 @@ export default defineComponent({
     return {
       count: 0,
       color: true,
+      list: [],
     };
   },
 
@@ -24,6 +31,7 @@ export default defineComponent({
   watch: {
     count() {
       this.color = !this.color;
+      this.list.push(this.count);
     },
   },
 
