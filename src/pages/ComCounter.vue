@@ -1,10 +1,11 @@
 <template>
   <div>{{ count }}</div>
+  <div>{{ doubleCount }}</div>
   <button @click="add">add</button>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({
   setup() {
@@ -14,8 +15,17 @@ export default defineComponent({
       count.value++;
     }
 
+    watch(count, () => {
+      console.log('sss');
+    });
+
+    let doubleCount = computed(() => {
+      return count.value * 2;
+    });
+
     return {
       count,
+      doubleCount,
       add,
     };
   },
