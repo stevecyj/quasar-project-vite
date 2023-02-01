@@ -1,5 +1,6 @@
 <template>
   <h1>{{ count }}</h1>
+  <h2>{{ doubleCount }}</h2>
   <button @click="add">add</button>
 </template>
 
@@ -11,6 +12,12 @@ export default defineComponent({
     return {
       count: 0,
     };
+  },
+
+  computed: {
+    doubleCount() {
+      return this.count * 2;
+    },
   },
 
   methods: {
