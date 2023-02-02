@@ -1,6 +1,6 @@
 <template>
   <div>{{ count }}</div>
-  <div>{{ doubleCount }}</div>
+  <div class="color">{{ doubleCount }}</div>
   <button @click="add">add</button>
 </template>
 
@@ -10,6 +10,7 @@ import { computed, defineComponent, ref, watch } from 'vue';
 export default defineComponent({
   setup() {
     let count = ref(0);
+    let color = ref('red');
 
     function add() {
       count.value++;
@@ -17,6 +18,11 @@ export default defineComponent({
 
     watch(count, () => {
       console.log('sss');
+      if (count.value % 2 === 0) {
+        color.value = 'red';
+      } else {
+        color.value = 'green';
+      }
     });
 
     let doubleCount = computed(() => {
@@ -26,10 +32,15 @@ export default defineComponent({
     return {
       count,
       doubleCount,
+      color,
       add,
     };
   },
 });
 </script>
 
-<style></style>
+<style>
+.color {
+  color: v-bind(color);
+}
+</style>
