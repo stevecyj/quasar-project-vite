@@ -1,6 +1,7 @@
 <template>
   <div class="box text-primary q-ma-sm-sm q-ma-md-xl">lorem</div>
   <div>JOJO</div>
+  <div class="cblue">JOJO</div>
   <button @click="toggleDark">toggle dark mode</button>
 </template>
 
@@ -14,7 +15,7 @@ const toggleDark = () => {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 body.body--dark {
   background: darkgray;
 }
