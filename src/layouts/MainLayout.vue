@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title> Quasar App</q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
@@ -23,7 +23,7 @@
       bordered
     >
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header> Essential Links</q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -45,16 +45,16 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    title: 'Docs',
+    title: 'Style',
     caption: 'quasar.dev',
     icon: 'school',
-    link: 'https://quasar.dev',
+    link: 'style',
   },
   {
-    title: 'Github',
+    title: 'Counter',
     caption: 'github.com/quasarframework',
     icon: 'code',
-    link: 'https://github.com/quasarframework',
+    link: 'counter',
   },
   {
     title: 'Discord Chat Channel',
