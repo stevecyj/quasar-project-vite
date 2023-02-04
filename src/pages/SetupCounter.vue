@@ -22,7 +22,7 @@ function add() {
 }
 
 function toStyle() {
-  $router.push('/style');
+  $router.push('style');
 }
 
 watch(count, () => {

@@ -3,12 +3,16 @@
   <div>JOJO</div>
   <div class="cblue">JOJO</div>
   <button @click="toggleDark">toggle dark mode</button>
+  <button @click="$s.toggleLeftDraw">toggle dark mode</button>
+  <button @click="toggleDark">toggle dark mode</button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { useQuasar } from 'quasar';
+import { useLayoutStore } from 'stores/layout';
 
 const $q = useQuasar();
+const $s = useLayoutStore();
 
 const toggleDark = () => {
   $q.dark.toggle();
